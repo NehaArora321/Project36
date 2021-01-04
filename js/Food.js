@@ -13,8 +13,8 @@ class Food{
     }
 
     updateFoodStock(fooddata){
-        database.ref("/").set({
-            "Food": fooddata
+        database.ref("/").update({
+            Food: fooddata
         })
     }
 
@@ -28,8 +28,8 @@ class Food{
     }
 
     updateFeedTime(feeddata){
-        database.ref("/").set({
-            "FeedTime": feeddata
+        database.ref("/").update({
+            FeedTime: feeddata
         })
     }
 
