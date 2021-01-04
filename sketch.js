@@ -27,6 +27,11 @@ function setup() {
   addfood=createButton("Add Food")
   addfood.position(500,30)
   addfood.mousePressed(ClickAddFood);
+
+  mILKBOTTLE=createSprite(600,350,80,80)
+  mILKBOTTLE.addImage(milkBottleImg);
+  mILKBOTTLE.scale=0.15
+  mILKBOTTLE.visible=false
 }
 
 function draw() {  
@@ -59,14 +64,10 @@ function ClickFeed(){
   dog.addImage(HappyDogImg);
   
   foodObj.updateFeedTime(hour())
-  image(milkBottleImg,700,300,80,80)
+  mILKBOTTLE.visible=true
 }
 
 function ClickAddFood(){
   foodObj.foodStock += 1;
   foodObj.updateFoodStock(foodObj.foodStock);
 }
-
-
-
-
